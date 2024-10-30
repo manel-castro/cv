@@ -50,6 +50,7 @@ export const LanguageSelector = () => {
           flexDirection: "column",
           justifyContent: "space-between",
           overflowY: "auto",
+          zIndex: 1200,
         }}
       >
         <div

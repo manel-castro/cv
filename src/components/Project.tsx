@@ -2,11 +2,14 @@ import React from "react";
 
 import "../assets/styles/Project.scss";
 import { PROJECTS } from "../data/projects";
+import { useTranslation } from "react-i18next";
 
 function Project() {
+  const { t } = useTranslation();
+
   return (
     <div className="projects-container" id="projects">
-      <h1>Personal Projects</h1>
+      <h1>{t("personal-projects")}</h1>
       <div className="projects-grid">
         {Object.values(PROJECTS).map((project) => (
           <div className="project">
@@ -19,9 +22,9 @@ function Project() {
               />
             </a>
             <a href={project.link} target="_blank" rel="noreferrer">
-              <h2>{project.title}</h2>
+              <h2>{t(project.title)}</h2>
             </a>
-            <p>{project.description}</p>
+            <p>{t(project.description)}</p>
           </div>
         ))}
       </div>

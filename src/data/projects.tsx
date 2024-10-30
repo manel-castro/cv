@@ -17,7 +17,7 @@ interface Project {
   image: any;
   title: string;
   date: string;
-  description: ReactNode | string;
+  description: string;
 }
 
 export const PROJECTS: { [key: string]: Project } = {
@@ -25,38 +25,22 @@ export const PROJECTS: { [key: string]: Project } = {
     link: "https://restdali.com",
     date: "2024",
     image: restdali,
-    title: "Restdali",
-    description: `A web application for creating Restaurant Menus online. It's
-        developed using React, NodeJS, Kubernetes and Postgres.`,
+    title: "projects-1-title",
+    description: "projects-1-description",
   },
   project2: {
     link: "https://github.com/manel-castro/react-microservices",
     image: mock10,
-    title: "Microservices: Kubernettes, Docker and React",
+    title: "projects-2-title",
     date: "2023",
-    description: `I completed this certification as of May 2023. It's a fully pledged
-        microservices backend. It covers all from message brokers to
-        automated deployment.`,
+    description: "projects-2-description",
   },
   project3: {
     link: "https://github.com/manel-castro/sockets-vue",
     image: mock09,
-    title: "Socket.io and Vue.JS",
+    title: "projects-3-title",
     date: "2023",
-    description: (
-      <>
-        I developed this chat room following{" "}
-        <a
-          href="https://socket.io/get-started/private-messaging-part-1/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          this tutorial
-        </a>
-        . It not only allows for bidirectional messages but also for persistent
-        store of users.
-      </>
-    ),
+    description: "projects-3-description",
   },
   //   project4: {
   //     link: "https://github.com/manel-castro/angular-todos/tree/master",
@@ -70,26 +54,23 @@ export const PROJECTS: { [key: string]: Project } = {
   project5: {
     link: "https://github.com/manel-castro/react-router",
     image: mock07,
-    title: "React Contacts Agenda",
+    title: "projects-4-title",
     date: "2023",
-    description:
-      "This is an implementation of a contacts agenda using React Router.",
+    description: "projects-4-description",
   },
   project6: {
     link: "https://github.com/manel-castro/puppeteer",
     image: mock06,
-    title: "Web scrapping with Puppeteer",
+    title: "projects-5-title",
     date: "2022",
-    description: `I implemented Puppeteer (Automated Testing tool) to update registers
-        from an online questionnaire using Excel files.`,
+    description: "projects-5-description",
   },
   project7: {
     link: "https://github.com/manel-castro/js-ddbb",
     image: mock05,
-    title: "Node JS DDBB",
+    title: "projects-6-title",
     date: "2021",
-    description: `I built a boilerplate database using Node JS and Express JS. It
-        allows for CRUD operations and has an users system.`,
+    description: "projects-6-description",
   },
   //   project8: {
   //     link: "https://github.com/manel-castro/vue-todos-app",
@@ -101,10 +82,9 @@ export const PROJECTS: { [key: string]: Project } = {
   project9: {
     link: "https://github.com/manel-castro/threejs-tests/tree/master",
     image: mock03,
-    title: "Three JS: 3D figures",
+    title: "projects-7-title",
     date: "2021",
-    description: `I implemented the npm package Three JS for modeling 3D components
-        using Vanilla JS.`,
+    description: "projects-7-description",
   },
   //   project10: {
   //     link: "https://github.com/manel-castro/robots-app",
@@ -116,17 +96,15 @@ export const PROJECTS: { [key: string]: Project } = {
   project11: {
     link: "https://github.com/manel-castro/react-web-styled-components/",
     image: mock01,
-    title: "Styled Components: ULTRA",
+    title: "projects-8-title",
     date: "2020",
-    description: `A landing page developed using React with Styled Components npm
-        package.`,
+    description: "projects-8-description",
   },
   project12: {
     link: "https://github.com/manel-castro/Todos-App",
     image: mock00,
-    title: "React Todos App",
+    title: "projects-9-title",
     date: "2019",
-    description: `A Todos App developed using React, Redux and Router, and deployed
-        using Node JS and Express.`,
+    description: "projects-9-description",
   },
 };

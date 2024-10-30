@@ -5,6 +5,7 @@ import { faReact, faDocker } from "@fortawesome/free-brands-svg-icons";
 import { faDatabase } from "@fortawesome/free-solid-svg-icons";
 import Chip from "@mui/material/Chip";
 import "../assets/styles/Expertise.scss";
+import { useTranslation } from "react-i18next";
 
 const labelsFirst = [
   "React",
@@ -25,28 +26,28 @@ const labelsThird = [
   "Git",
   "GitHub Actions",
   "Docker",
+  "Kubernetes",
   "Azure",
+  "Google Cloud",
   "Linux",
   "Puppeteer",
   "Selenium",
 ];
 
 function Expertise() {
+  const { t } = useTranslation();
+
   return (
     <div className="container" id="expertise">
       <div className="skills-container">
-        <h1>Expertise</h1>
+        <h1>{t("expertise")}</h1>
         <div className="skills-grid">
           <div className="skill">
             <FontAwesomeIcon icon={faReact} size="3x" />
-            <h3>Front-End Web Development</h3>
-            <p>
-              I have built a diverse array of web applications from scratch
-              implementing modern technologies such as React, React Native,
-              Angular and Vue. I have a strong proficiency in Agile development.
-            </p>
+            <h3>{t("expertise-1-title")}</h3>
+            <p>{t("expertise-1-description")}</p>
             <div className="flex-chips">
-              <span className="chip-title">Tech stack:</span>
+              <span className="chip-title">{t("tech-stack")}:</span>
               {labelsFirst.map((label, index) => (
                 <Chip key={index} className="chip" label={label} />
               ))}
@@ -55,14 +56,10 @@ function Expertise() {
 
           <div className="skill">
             <FontAwesomeIcon icon={faDatabase} size="3x" />
-            <h3>Back-End Development</h3>
-            <p>
-              I developed back-end applications from scratch using Node JS,
-              Kubernetes and Docker. I'm proficient using Express and setting up
-              Middlewares. I used message brokers like Nats or RabbitMQ.
-            </p>
+            <h3>{t("expertise-2-title")}</h3>
+            <p>{t("expertise-2-description")}</p>
             <div className="flex-chips">
-              <span className="chip-title">Tech stack:</span>
+              <span className="chip-title">{t("tech-stack")}:</span>
               {labelsSecond.map((label, index) => (
                 <Chip key={index} className="chip" label={label} />
               ))}
@@ -71,14 +68,10 @@ function Expertise() {
 
           <div className="skill">
             <FontAwesomeIcon icon={faDocker} size="3x" />
-            <h3>DevOps & Automation</h3>
-            <p>
-              Once the application is built, I help setting up DevOps testing,
-              CI/CD pipelines, and deployment automation to support the
-              successful Go-Live.
-            </p>
+            <h3>{t("expertise-3-title")}</h3>
+            <p>{t("expertise-3-description")}</p>
             <div className="flex-chips">
-              <span className="chip-title">Tech stack:</span>
+              <span className="chip-title">{t("tech-stack")}:</span>
               {labelsThird.map((label, index) => (
                 <Chip key={index} className="chip" label={label} />
               ))}

@@ -10,10 +10,6 @@ import { useStateContext } from "../context/context";
 function Main() {
   const { darkMode: mode } = useStateContext();
 
-  console.log("bgDark: ", bgDark);
-  console.log("bgLight: ", bgLight);
-  console.log("mode: ", mode);
-
   return (
     <div className="container">
       <div className="about-section">

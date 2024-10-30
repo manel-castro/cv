@@ -16,17 +16,20 @@ import ListItemText from "@mui/material/ListItemText";
 import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import { LanguageSelector } from "./LanguageSelector";
+import { useTranslation } from "react-i18next";
 
 const drawerWidth = 240;
-const navItems = [
-  ["Expertise", "expertise"],
-  ["History", "history"],
-  ["Projects", "projects"],
-  //  ['Contact', 'contact']
-];
 
 function Navigation({ parentToChild, modeChange }: any) {
+  const { t } = useTranslation();
   const { mode } = parentToChild;
+
+  const navItems = [
+    [t("nav-expertise"), "expertise"],
+    [t("nav-history"), "history"],
+    [t("nav-projects"), "projects"],
+    //  ['Contact', 'contact']
+  ];
 
   const [mobileOpen, setMobileOpen] = useState<boolean>(false);
   const [scrolled, setScrolled] = useState<boolean>(false);

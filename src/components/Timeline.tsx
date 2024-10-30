@@ -8,70 +8,73 @@ import {
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 import "../assets/styles/Timeline.scss";
+import { useTranslation } from "react-i18next";
 
 function Timeline() {
+  const { t } = useTranslation();
+
   return (
     <div id="history">
       <div className="items-container">
-        <h1>Career History</h1>
+        <h1>{t("career-history")}</h1>
         <VerticalTimeline>
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
             contentStyle={{ background: "white", color: "rgb(39, 40, 34)" }}
             contentArrowStyle={{ borderRight: "7px solid  white" }}
-            date="Apr 2022 - Present"
+            date={t("career-history-1-date")}
             iconStyle={{ background: "#5000ca", color: "rgb(39, 40, 34)" }}
             icon={<FontAwesomeIcon icon={faBriefcase} />}
           >
             <h3 className="vertical-timeline-element-title">
-              Frontend Developer
-            </h3>
-            <h4 className="vertical-timeline-element-subtitle">OMP</h4>
-            <p>
-              React, Vanilla Javascript, Agile Scrum, Project Management, Pull
-              Request Reviews.
-            </p>
-          </VerticalTimelineElement>
-          <VerticalTimelineElement
-            className="vertical-timeline-element--work"
-            date="Jan 2022 - Apr 2022"
-            iconStyle={{ background: "#5000ca", color: "rgb(39, 40, 34)" }}
-            icon={<FontAwesomeIcon icon={faBriefcase} />}
-          >
-            <h3 className="vertical-timeline-element-title">
-              Data Integration Specialist
+              {t("career-history-1-title")}
             </h3>
             <h4 className="vertical-timeline-element-subtitle">
-              Hospital Universitari de Bellvitge
+              {t("career-history-1-company")}
             </h4>
-            <p>
-              Data Integration, Automated Testing, Puppeteer, NodeJS, Project
-              Management.
-            </p>
+            <p>{t("career-history-1-description")}</p>
           </VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
-            date="Aug 2021 - Mar 2021"
+            date={t("career-history-2-date")}
             iconStyle={{ background: "#5000ca", color: "rgb(39, 40, 34)" }}
             icon={<FontAwesomeIcon icon={faBriefcase} />}
           >
             <h3 className="vertical-timeline-element-title">
-              React Native Developer
+              {t("career-history-2-title")}
             </h3>
-            <h4 className="vertical-timeline-element-subtitle">Goil</h4>
-            <p>React Native, Project Management, Agile Scrum.</p>
+            <h4 className="vertical-timeline-element-subtitle">
+              {t("career-history-2-company")}
+            </h4>
+            <p>{t("career-history-2-description")}</p>
           </VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
-            date="Jun 2021 - Dec 2021"
+            date={t("career-history-3-date")}
             iconStyle={{ background: "#5000ca", color: "rgb(39, 40, 34)" }}
             icon={<FontAwesomeIcon icon={faBriefcase} />}
           >
-            <h3 className="vertical-timeline-element-title">React Developer</h3>
+            <h3 className="vertical-timeline-element-title">
+              {t("career-history-3-title")}
+            </h3>
             <h4 className="vertical-timeline-element-subtitle">
-              Atlabs Digital
+              {t("career-history-3-company")}
             </h4>
-            <p>React, Project Management, Agile Scrum.</p>
+            <p>{t("career-history-3-description")}</p>
+          </VerticalTimelineElement>
+          <VerticalTimelineElement
+            className="vertical-timeline-element--work"
+            date={t("career-history-4-date")}
+            iconStyle={{ background: "#5000ca", color: "rgb(39, 40, 34)" }}
+            icon={<FontAwesomeIcon icon={faBriefcase} />}
+          >
+            <h3 className="vertical-timeline-element-title">
+              {t("career-history-4-title")}
+            </h3>
+            <h4 className="vertical-timeline-element-subtitle">
+              {t("career-history-4-company")}
+            </h4>
+            <p>{t("career-history-4-description")}</p>
           </VerticalTimelineElement>
         </VerticalTimeline>
       </div>
