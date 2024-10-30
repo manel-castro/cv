@@ -106,41 +106,38 @@ function Navigation({ parentToChild, modeChange }: any) {
         component="nav"
         id="navigation"
         className={`navbar-fixed-top${scrolled ? " scrolled" : ""}`}
-        style={{
-          backgroundColor: "#f8f9fa",
-          display: "flex",
-          alignItems: "center",
-        }}
       >
-        <Toolbar className="navigation-bar w-full max-w-[1500px]">
-          <div className="flex grow items-center gap-5 justify-between sm:justify-start">
-            <IconButton
-              color="inherit"
-              aria-label="open drawer"
-              edge="start"
-              onClick={handleDrawerToggle}
-              sx={{ display: { sm: "none" } }}
-            >
-              <MenuIcon />
-            </IconButton>
-            {mode === "dark" ? (
-              <LightModeIcon onClick={() => modeChange()} />
-            ) : (
-              <DarkModeIcon onClick={() => modeChange()} />
-            )}
-            <LanguageSelector />
-          </div>
-          <Box sx={{ display: { xs: "none", sm: "block" } }}>
-            {navItems.map((item) => (
-              <Button
-                key={item[0]}
-                onClick={() => scrollToSection(item[1])}
-                sx={{ color: "#fff" }}
+        <Toolbar className="navigation-bar flex justify-center">
+          <div className="w-full max-w-[1500px] flex justify-between">
+            <div className="flex grow items-center gap-5 justify-between sm:justify-start">
+              <IconButton
+                color="inherit"
+                aria-label="open drawer"
+                edge="start"
+                onClick={handleDrawerToggle}
+                sx={{ display: { sm: "none" } }}
               >
-                {item[0]}
-              </Button>
-            ))}
-          </Box>
+                <MenuIcon />
+              </IconButton>
+              {mode === "dark" ? (
+                <LightModeIcon onClick={() => modeChange()} />
+              ) : (
+                <DarkModeIcon onClick={() => modeChange()} />
+              )}
+              <LanguageSelector />
+            </div>
+            <Box sx={{ display: { xs: "none", sm: "block" } }}>
+              {navItems.map((item) => (
+                <Button
+                  key={item[0]}
+                  onClick={() => scrollToSection(item[1])}
+                  sx={{ color: "#fff" }}
+                >
+                  {item[0]}
+                </Button>
+              ))}
+            </Box>
+          </div>
         </Toolbar>
       </AppBar>
       <nav>
