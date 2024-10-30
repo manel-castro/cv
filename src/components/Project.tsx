@@ -19,6 +19,10 @@ function Project() {
                 className="zoom"
                 alt="thumbnail"
                 width="100%"
+                height={280}
+                style={{
+                  objectFit: "contain",
+                }}
               />
             </a>
             <a href={project.link} target="_blank" rel="noreferrer">
