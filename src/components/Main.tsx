@@ -1,26 +1,26 @@
-import React from "react";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import "../assets/styles/Main.scss";
-import me from "./../assets/images/me.jpeg";
-import bgDark from "./../assets/images/bg-dark.png";
-import bgLight from "./../assets/images/bg-light.png";
-import { useStateContext } from "../context/context";
-import { AudioPlayer } from "./AudioPlayer/AudioPlayer";
 import { useWindowSize } from "../hooks/useWindowSize";
 import { getIsPhone } from "../lib/deviceSize";
+import me from "./../assets/images/me.jpeg";
+import { AudioPlayer } from "./AudioPlayer/AudioPlayer";
 
 function Main() {
   const { windowWidth } = useWindowSize();
   const isPhone = getIsPhone(windowWidth);
 
   return (
-    <div className="container w-full">
+    <div className="container w-full min-h-[600px]">
       <div
         style={{
+          flexDirection: "column",
+          gap: 100,
+          paddingTop: 80,
+
           ...(isPhone
             ? {
-                paddingTop: 100,
+                gap: 50,
               }
             : {}),
         }}
@@ -30,18 +30,25 @@ function Main() {
           className="about-section z-20"
           style={{
             display: "flex",
-            flexDirection: "column",
             textAlign: "center",
             alignItems: "center",
+            flexDirection: "row",
+            gap: 50,
+
+            ...(isPhone
+              ? {
+                  flexDirection: "column",
+                  gap: 0,
+                }
+              : {}),
           }}
         >
           <div
             className="image-wrapper"
             style={{
               display: "flex",
-              flexDirection: "column",
               textAlign: "center",
-              alignItems: "center",
+              justifyContent: "center",
             }}
           >
             <img src={me} alt="Avatar" loading="lazy" />
