@@ -2,13 +2,13 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import "../assets/styles/Main.scss";
 import { useWindowSize } from "../hooks/useWindowSize";
-import { getIsPhone } from "../lib/deviceSize";
+import { getIsLessThan780px } from "../lib/deviceSize";
 import me from "./../assets/images/me.jpeg";
 import { AudioPlayer } from "./AudioPlayer/AudioPlayer";
 
 function Main() {
   const { windowWidth } = useWindowSize();
-  const isPhone = getIsPhone(windowWidth);
+  const isVertical = getIsLessThan780px(windowWidth);
 
   return (
     <div className="container w-full min-h-[600px]">
@@ -18,7 +18,7 @@ function Main() {
           gap: 100,
           paddingTop: 80,
 
-          ...(isPhone
+          ...(isVertical
             ? {
                 gap: 50,
               }
@@ -35,7 +35,7 @@ function Main() {
             flexDirection: "row",
             gap: 50,
 
-            ...(isPhone
+            ...(isVertical
               ? {
                   flexDirection: "column",
                   gap: 0,

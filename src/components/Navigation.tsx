@@ -17,12 +17,14 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import { LanguageSelector } from "./LanguageSelector";
 import { useTranslation } from "react-i18next";
+import { useWindowSize } from "../hooks/useWindowSize";
 
 const drawerWidth = 240;
 
 function Navigation({ parentToChild, modeChange }: any) {
   const { t } = useTranslation();
   const { mode } = parentToChild;
+  const { windowWidth } = useWindowSize();
 
   const navItems = [
     [t("nav-expertise"), "expertise"],
@@ -37,6 +39,12 @@ function Navigation({ parentToChild, modeChange }: any) {
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
   };
+
+  useEffect(() => {
+    if (windowWidth > 580) {
+      setMobileOpen(false);
+    }
+  }, [windowWidth]);
 
   useEffect(() => {
     const handleScroll = () => {
