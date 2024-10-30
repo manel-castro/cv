@@ -15,6 +15,7 @@ import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
 import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
+import { LanguageSelector } from "./LanguageSelector";
 
 const drawerWidth = 240;
 const navItems = [
@@ -96,20 +97,23 @@ function Navigation({ parentToChild, modeChange }: any) {
         className={`navbar-fixed-top${scrolled ? " scrolled" : ""}`}
       >
         <Toolbar className="navigation-bar">
-          <IconButton
-            color="inherit"
-            aria-label="open drawer"
-            edge="start"
-            onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: "none" } }}
-          >
-            <MenuIcon />
-          </IconButton>
-          {mode === "dark" ? (
-            <LightModeIcon onClick={() => modeChange()} />
-          ) : (
-            <DarkModeIcon onClick={() => modeChange()} />
-          )}
+          <div className="flex grow items-center gap-5 justify-between sm:justify-start">
+            <IconButton
+              color="inherit"
+              aria-label="open drawer"
+              edge="start"
+              onClick={handleDrawerToggle}
+              sx={{ mr: 2, display: { sm: "none" } }}
+            >
+              <MenuIcon />
+            </IconButton>
+            {mode === "dark" ? (
+              <LightModeIcon onClick={() => modeChange()} />
+            ) : (
+              <DarkModeIcon onClick={() => modeChange()} />
+            )}
+            <LanguageSelector />
+          </div>
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
             {navItems.map((item) => (
               <Button
