@@ -3,13 +3,38 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import "../assets/styles/Main.scss";
 import me from "./../assets/images/me.jpeg";
+import bgDark from "./../assets/images/bg-dark.png";
+import bgLight from "./../assets/images/bg-light.png";
+import { useStateContext } from "../context/context";
 
 function Main() {
+  const { darkMode: mode } = useStateContext();
+
+  console.log("bgDark: ", bgDark);
+  console.log("bgLight: ", bgLight);
+  console.log("mode: ", mode);
+
   return (
     <div className="container">
       <div className="about-section">
+        {mode && (
+          <img
+            src={mode === "dark" ? bgDark : bgLight}
+            style={{
+              position: "absolute",
+              top: 0,
+              left: 0,
+              backgroundRepeat: "no-repeat",
+              backgroundSize: "cover",
+              backgroundAttachment: "fixed",
+              backgroundPosition: "center",
+            }}
+            alt="Avatar"
+            loading="lazy"
+          />
+        )}
         <div className="image-wrapper">
-          <img src={me} alt="Avatar" />
+          <img src={me} alt="Avatar" loading="lazy" />
         </div>
         <div className="content">
           <div className="social_icons">

@@ -58,19 +58,19 @@ export const PROJECTS: { [key: string]: Project } = {
       </>
     ),
   },
-  project4: {
-    link: "https://github.com/manel-castro/angular-todos/tree/master",
-    image: mock08,
+  //   project4: {
+  //     link: "https://github.com/manel-castro/angular-todos/tree/master",
+  //     image: mock08,
 
-    title: "Angular Todos App",
-    date: "2023",
-    description:
-      "I developed this Todos App using Angular JS and a small API Crud.",
-  },
+  //     title: "Angular Todos App",
+  //     date: "2023",
+  //     description:
+  //       "I developed this Todos App using Angular JS and a small API Crud.",
+  //   },
   project5: {
     link: "https://github.com/manel-castro/react-router",
     image: mock07,
-    title: "React Router",
+    title: "React Contacts Agenda",
     date: "2023",
     description:
       "This is an implementation of a contacts agenda using React Router.",
@@ -91,32 +91,32 @@ export const PROJECTS: { [key: string]: Project } = {
     description: `I built a boilerplate database using Node JS and Express JS. It
         allows for CRUD operations and has an users system.`,
   },
-  project8: {
-    link: "https://github.com/manel-castro/vue-todos-app",
-    image: mock04,
-    title: "Vue Todos App",
-    date: "2021",
-    description: `A small todos app conected to an API using Vue JS.`,
-  },
+  //   project8: {
+  //     link: "https://github.com/manel-castro/vue-todos-app",
+  //     image: mock04,
+  //     title: "Vue Todos App",
+  //     date: "2021",
+  //     description: `A small todos app conected to an API using Vue JS.`,
+  //   },
   project9: {
     link: "https://github.com/manel-castro/threejs-tests/tree/master",
     image: mock03,
-    title: "Three JS Test",
+    title: "Three JS: 3D figures",
     date: "2021",
     description: `I implemented the npm package Three JS for modeling 3D components
         using Vanilla JS.`,
   },
-  project10: {
-    link: "https://github.com/manel-castro/robots-app",
-    image: mock02,
-    title: "Robots App",
-    date: "2021",
-    description: `A phone/web application developed using React Native and Expo.`,
-  },
+  //   project10: {
+  //     link: "https://github.com/manel-castro/robots-app",
+  //     image: mock02,
+  //     title: "Robots App",
+  //     date: "2021",
+  //     description: `A phone/web application developed using React Native and Expo.`,
+  //   },
   project11: {
     link: "https://github.com/manel-castro/react-web-styled-components/",
     image: mock01,
-    title: "ULTRA",
+    title: "Styled Components: ULTRA",
     date: "2020",
     description: `A landing page developed using React with Styled Components npm
         package.`,

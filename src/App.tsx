@@ -1,20 +1,20 @@
-import React, { useState, useEffect } from "react";
+import { useEffect } from "react";
 import {
-  Main,
-  Timeline,
   Expertise,
-  Project,
-  Contact,
-  Navigation,
   Footer,
+  Main,
+  Navigation,
+  Project,
+  Timeline,
 } from "./components";
 import FadeIn from "./components/FadeIn";
 import "./index.scss";
 
+import { useStateContext } from "./context/context";
 import "./localization/localization";
 
 function App() {
-  const [mode, setMode] = useState<string>("dark");
+  const { darkMode: mode, setDarkMode: setMode } = useStateContext();
 
   const handleModeChange = () => {
     if (mode === "dark") {
