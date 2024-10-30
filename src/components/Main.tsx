@@ -28,7 +28,7 @@ function Main() {
               <LinkedInIcon />
             </a>
           </div>
-          <h1>Manel Castro.</h1>
+          <h1>Manel Castro</h1>
           <p>Full Stack Engineer</p>
 
           <div className="mobile_social_icons">
