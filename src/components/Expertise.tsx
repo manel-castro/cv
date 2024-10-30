@@ -57,7 +57,7 @@ function Expertise() {
                 darkMode === "dark"
                   ? "rgba(41, 41, 41, 0.4)"
                   : "rgba(192, 192, 192, 0.3)",
-
+              backdropFilter: "blur(2px)",
               borderRadius: 40,
             }
       }
