@@ -2,8 +2,13 @@ import React from "react";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import "../assets/styles/Footer.scss";
+import { useStateContext } from "../context/context";
 
 function Footer() {
+  const { darkMode } = useStateContext();
+
+  const color = darkMode === "dark" ? "#fff" : "#000";
+
   return (
     <footer>
       <div>
@@ -12,14 +17,14 @@ function Footer() {
           target="_blank"
           rel="noreferrer"
         >
-          <GitHubIcon />
+          <GitHubIcon style={{ color }} />
         </a>
         <a
           href="https://www.linkedin.com/in/manelcastro/"
           target="_blank"
           rel="noreferrer"
         >
-          <LinkedInIcon />
+          <LinkedInIcon style={{ color }} />
         </a>
       </div>
     </footer>

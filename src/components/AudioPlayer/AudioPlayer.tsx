@@ -10,7 +10,7 @@ export const AudioPlayer = () => {
   return (
     <AudioPlayerProvider>
       <div
-        className="w-full flex flex-row gap-2 justify-between items-center text-white p-[0.5rem_10px] rounded-full pl-5 pr-8"
+        className="w-full flex flex-row gap-2 justify-between items-center text-white rounded-full pl-5 pr-8"
         style={{
           backgroundColor:
             darkMode === "dark"

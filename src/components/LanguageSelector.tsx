@@ -27,12 +27,7 @@ export const LanguageSelector = () => {
     <Sheet open={isSheetOpen} onOpenChange={(open) => setIsSheetOpen(open)}>
       <div style={{}}>
         <SheetTrigger asChild>
-          <IconButton
-            color="inherit"
-            aria-label="open drawer"
-            edge="start"
-            sx={{ mr: 2 }}
-          >
+          <IconButton color="inherit" aria-label="open drawer" edge="start">
             <Languages className="h-[1.5rem] w-[1.5rem]" strokeWidth={1.5} />
           </IconButton>
           {/* {

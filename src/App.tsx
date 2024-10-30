@@ -40,10 +40,11 @@ function App() {
       className={`main-container ${
         mode === "dark" ? "dark-mode" : "light-mode"
       }`}
+      style={{ overflowX: "hidden" }}
     >
       <Navigation parentToChild={{ mode }} modeChange={handleModeChange} />
       <FadeIn transitionDuration={700}>
-        <div className="relative">
+        <div className="relative flex flex-col w-full items-center">
           {mode && (
             <img
               id="bg-image"
@@ -71,7 +72,7 @@ function App() {
               loading="lazy"
             />
           )}
-          <div className="z-20 relative">
+          <div className="z-20 relative max-w-[1500px]">
             <Main />
             <Expertise />
             <Timeline />

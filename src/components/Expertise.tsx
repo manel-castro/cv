@@ -6,6 +6,9 @@ import { faDatabase } from "@fortawesome/free-solid-svg-icons";
 import Chip from "@mui/material/Chip";
 import "../assets/styles/Expertise.scss";
 import { useTranslation } from "react-i18next";
+import { useWindowSize } from "../hooks/useWindowSize";
+import { getIsPhone } from "../lib/deviceSize";
+import { useStateContext } from "../context/context";
 
 const labelsFirst = [
   "React",
@@ -37,8 +40,28 @@ const labelsThird = [
 function Expertise() {
   const { t } = useTranslation();
 
+  const { darkMode } = useStateContext();
+
+  const { windowWidth } = useWindowSize();
+  const isPhone = getIsPhone(windowWidth);
+
   return (
-    <div className="container" id="expertise">
+    <div
+      className="container"
+      id="expertise"
+      style={
+        isPhone
+          ? {}
+          : {
+              backgroundColor:
+                darkMode === "dark"
+                  ? "rgba(41, 41, 41, 0.4)"
+                  : "rgba(192, 192, 192, 0.3)",
+
+              borderRadius: 40,
+            }
+      }
+    >
       <div className="skills-container">
         <h1>{t("expertise")}</h1>
         <div className="skills-grid">

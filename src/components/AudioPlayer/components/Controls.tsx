@@ -4,6 +4,8 @@ import { Play, Pause } from "lucide-react";
 import { useAudioPlayerContext } from "../context/audio-player-context";
 import { tracks } from "../data/tracks";
 import { useStateContext } from "../../../context/context";
+import { useWindowSize } from "../../../hooks/useWindowSize";
+import { getIsPhone } from "../../../lib/deviceSize";
 
 export const Controls = () => {
   const {
@@ -22,6 +24,8 @@ export const Controls = () => {
   const [isShuffle, setIsShuffle] = useState<boolean>(false);
   const [isRepeat, setIsRepeat] = useState<boolean>(false);
   const { darkMode } = useStateContext();
+  const { windowWidth } = useWindowSize();
+  const isPhone = getIsPhone(windowWidth);
 
   // const [isPlaying, setIsPlaying] = useState<boolean>(false);
 
@@ -148,7 +152,7 @@ export const Controls = () => {
 
       <button
         onClick={() => setIsPlaying((prev) => !prev)}
-        className="p-6 rounded-full "
+        className={`${isPhone ? "p-4" : "p-6"} rounded-full `}
         style={{
           backgroundColor:
             darkMode === "dark"
@@ -158,13 +162,13 @@ export const Controls = () => {
       >
         {isPlaying ? (
           <Pause
-            size={50}
+            size={isPhone ? 30 : 50}
             color="#fff"
 
             // "#881cc3"
           />
         ) : (
-          <Play size={50} color="#fff" />
+          <Play size={isPhone ? 30 : 50} color="#fff" />
         )}
       </button>
     </div>

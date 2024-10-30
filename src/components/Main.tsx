@@ -7,18 +7,54 @@ import bgDark from "./../assets/images/bg-dark.png";
 import bgLight from "./../assets/images/bg-light.png";
 import { useStateContext } from "../context/context";
 import { AudioPlayer } from "./AudioPlayer/AudioPlayer";
+import { useWindowSize } from "../hooks/useWindowSize";
+import { getIsPhone } from "../lib/deviceSize";
 
 function Main() {
-  const { darkMode: mode } = useStateContext();
+  const { windowWidth } = useWindowSize();
+  const isPhone = getIsPhone(windowWidth);
 
   return (
     <div className="container w-full">
-      <div className="flex w-full md:justify-around md:items-center gap-10 flex-col md:flex-row">
-        <div className="about-section z-20">
-          <div className="image-wrapper">
+      <div
+        style={{
+          ...(isPhone
+            ? {
+                paddingTop: 100,
+              }
+            : {}),
+        }}
+        className="flex w-full md:justify-around md:items-center gap-10 flex-col md:flex-row"
+      >
+        <div
+          className="about-section z-20"
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            textAlign: "center",
+            alignItems: "center",
+          }}
+        >
+          <div
+            className="image-wrapper"
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              textAlign: "center",
+              alignItems: "center",
+            }}
+          >
             <img src={me} alt="Avatar" loading="lazy" />
           </div>
-          <div className="content">
+          <div
+            className="content"
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              textAlign: "center",
+              alignItems: "center",
+            }}
+          >
             <div className="social_icons">
               <a
                 href="https://github.com/manel-castro"
@@ -36,7 +72,13 @@ function Main() {
               </a>
             </div>
 
-            <h1>Manel Castro</h1>
+            <h1
+              style={{
+                textAlign: "center",
+              }}
+            >
+              Manel Castro
+            </h1>
             <p>Full Stack Engineer</p>
 
             <div className="mobile_social_icons">
