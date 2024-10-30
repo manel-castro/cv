@@ -19,8 +19,8 @@ function Project() {
                 className="zoom"
                 alt="thumbnail"
                 width="100%"
-                height={280}
                 style={{
+                  height: 280,
                   objectFit: "contain",
                 }}
               />
