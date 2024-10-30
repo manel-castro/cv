@@ -50,6 +50,7 @@ function App() {
               id="bg-image"
               src={mode === "dark" ? bgDark : bgLight}
               style={{
+                width: "100%",
                 position: "absolute",
                 top: 0,
                 left: 0,

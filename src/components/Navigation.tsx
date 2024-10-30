@@ -106,8 +106,13 @@ function Navigation({ parentToChild, modeChange }: any) {
         component="nav"
         id="navigation"
         className={`navbar-fixed-top${scrolled ? " scrolled" : ""}`}
+        style={{
+          backgroundColor: "#f8f9fa",
+          display: "flex",
+          alignItems: "center",
+        }}
       >
-        <Toolbar className="navigation-bar">
+        <Toolbar className="navigation-bar w-full max-w-[1500px]">
           <div className="flex grow items-center gap-5 justify-between sm:justify-start">
             <IconButton
               color="inherit"
