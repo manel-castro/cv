@@ -104,6 +104,23 @@ function Main() {
                 <LinkedInIcon />
               </a>
             </div>
+
+            <p
+              style={{
+                marginTop: 30,
+                fontSize: "1rem",
+              }}
+            >
+              Founded{" "}
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://www.restdali.com"
+              >
+                Restdali
+              </a>
+              .
+            </p>
           </div>
         </div>
         <div style={{ zIndex: 10 }}>
