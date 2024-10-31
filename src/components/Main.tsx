@@ -117,7 +117,7 @@ function Main() {
                 rel="noopener noreferrer"
                 href="https://www.restdali.com"
               >
-                Restdali
+                Restdali.com
               </a>
               .
             </p>
