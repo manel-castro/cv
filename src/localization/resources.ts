@@ -43,7 +43,7 @@ export const resources = {
       "career-history-4-description": `Typescript, React, Project Management, Agile Scrum, Testing.`,
 
       // Projects
-      "personal-projects": "Personal Projects",
+      "personal-projects": "Other Projects",
       "projects-1-title": "Restdali",
       "projects-1-description": `A web application for creating Restaurant Menus online. It's
         developed using React, NodeJS, Kubernetes and Postgres.`,
@@ -110,7 +110,7 @@ export const resources = {
       "career-history-4-description": `Typescript, React, Gestión de proyectos, Agile Scrum, Testing.`,
 
       // Projects
-      "personal-projects": "Proyectos personales",
+      "personal-projects": "Otros proyectos",
       "projects-1-title": "Restdali",
       "projects-1-description": `Una aplicación web para crear menús de restaurante en línea. Está desarrollada utilizando React, NodeJS, Kubernetes y Postgres.`,
       "projects-2-title": "Microservicios: Kubernetes, Docker y React",

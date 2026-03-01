@@ -12,18 +12,32 @@ import { useStateContext } from "../context/context";
 
 const labelsFirst = [
   "React",
+  "React Native",
   "TypeScript",
   "JavaScript",
   "HTML5",
   "CSS3",
   "SASS",
-  "React",
-  "React Native",
+  "Next",
   "Angular",
   "Vue",
 ];
 
-const labelsSecond = ["Node JS", "Express", "SQL", "PostgreSQL", "Postman"];
+const labelsSecond = [
+  "Node JS",
+  "Express",
+  "SQL",
+  "PostgreSQL",
+  "Postman",
+  ".Net",
+  "Python Django",
+  "MongoDB",
+  "Firebase",
+  "Nest.JS",
+  "Typescript",
+  "Prisma",
+  "Typeorm",
+];
 
 const labelsThird = [
   "Git",
@@ -35,6 +49,7 @@ const labelsThird = [
   "Linux",
   "Puppeteer",
   "Selenium",
+  "Cloudflare",
 ];
 
 function Expertise() {

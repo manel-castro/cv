@@ -11,9 +11,8 @@ import { initReactI18next } from "react-i18next";
  * i18next localization
  */
 
-if (localStorage.getItem("i18nextLng") === null) {
-  localStorage.setItem("i18nextLng", "es");
-}
+// Do not force a default in localStorage — prefer the browser-detected language
+// Allow the LanguageDetector to populate localStorage when appropriate.
 
 i18n
   .use(Backend) // passes i18n down to react-i18next
@@ -26,7 +25,11 @@ i18n
     resources: resources,
 
     fallbackLng: "es",
-
+    detection: {
+      // prefer the browser's detected language before any stored value
+      order: ["navigator", "localStorage"],
+      caches: ["localStorage"],
+    },
     interpolation: {
       escapeValue: false, // react already safes from xss => https://www.i18next.com/translation-function/interpolation#unescape
     },
