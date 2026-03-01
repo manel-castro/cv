@@ -9,7 +9,7 @@ export const resources = {
       "nav-projects": "Projects",
 
       // Expertise
-      expertise: "Expertise",
+      expertise: "Technologies",
       "tech-stack": "Tech stack",
       "expertise-1-title": "Front-End Web Development",
       "expertise-1-description": `I have built a diverse array of end-client web applications
@@ -81,7 +81,7 @@ export const resources = {
       "nav-projects": "Proyectos",
 
       // Expertise
-      expertise: "Experiencia",
+      expertise: "Tecnologias",
       "tech-stack": "Tecnologías",
       "expertise-1-title": "Desarrollo web front-end",
       "expertise-1-description": `He construido una amplia gama de aplicaciones web para clientes finales que utilizan tecnologías modernas como React, React Native, Angular y Vue.`,
