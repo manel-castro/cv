@@ -9,6 +9,7 @@ import {
   Project,
   Timeline,
 } from "./components";
+import OtherProjects from "./components/OtherProjects";
 import FadeIn from "./components/FadeIn";
 import "./index.scss";
 
@@ -76,6 +77,7 @@ function App() {
           <div className="z-20 relative max-w-[1500px]">
             <Main />
             <Expertise />
+            <OtherProjects />
             <Timeline />
             <Project />
             {/* <Contact/> */}

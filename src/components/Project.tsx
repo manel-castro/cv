@@ -8,8 +8,8 @@ function Project() {
   const { t } = useTranslation();
 
   return (
-    <div className="projects-container" id="projects">
-      <h1>{t("personal-projects")}</h1>
+    <div className="projects-container" id="other-projects">
+      <h1>{t("other-projects")}</h1>
       <div className="projects-grid">
         {Object.values(PROJECTS).map((project) => (
           <div className="project">

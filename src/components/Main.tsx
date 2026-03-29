@@ -11,7 +11,7 @@ function Main() {
   const isVertical = getIsLessThan780px(windowWidth);
 
   return (
-    <div className="container w-full min-h-[600px]">
+    <div id="inicio" className="container w-full min-h-[600px]">
       <div
         style={{
           flexDirection: "column",

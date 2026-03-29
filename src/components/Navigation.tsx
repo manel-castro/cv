@@ -27,10 +27,11 @@ function Navigation({ parentToChild, modeChange }: any) {
   const { windowWidth } = useWindowSize();
 
   const navItems = [
+    [t("nav-home"), "inicio"],
     [t("nav-expertise"), "expertise"],
-    [t("nav-history"), "history"],
     [t("nav-projects"), "projects"],
-    //  ['Contact', 'contact']
+    [t("nav-history"), "history"],
+    [t("nav-other-projects"), "other-projects"],
   ];
 
   const [mobileOpen, setMobileOpen] = useState<boolean>(false);
@@ -64,12 +65,12 @@ function Navigation({ parentToChild, modeChange }: any) {
 
   const scrollToSection = (section: string) => {
     console.log(section);
-    const expertiseElement = document.getElementById(section);
-    if (expertiseElement) {
-      expertiseElement.scrollIntoView({ behavior: "smooth" });
-      console.log("Scrolling to:", expertiseElement); // Debugging: Ensure the element is found
+    const el = document.getElementById(section);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth" });
+      console.log("Scrolling to:", el);
     } else {
-      console.error('Element with id "expertise" not found'); // Debugging: Log error if element is not found
+      console.error(`Element with id "${section}" not found`);
     }
   };
 

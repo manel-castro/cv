@@ -34,20 +34,7 @@ function Timeline() {
             </h4>
             <p>{t("career-history-1-description")}</p>
           </VerticalTimelineElement>
-          <VerticalTimelineElement
-            className="vertical-timeline-element--work"
-            date={t("career-history-2-date")}
-            iconStyle={{ background: "#5000ca", color: "rgb(39, 40, 34)" }}
-            icon={<FontAwesomeIcon icon={faBriefcase} />}
-          >
-            <h3 className="vertical-timeline-element-title">
-              {t("career-history-2-title")}
-            </h3>
-            <h4 className="vertical-timeline-element-subtitle">
-              {t("career-history-2-company")}
-            </h4>
-            <p>{t("career-history-2-description")}</p>
-          </VerticalTimelineElement>
+          {/** Removed Data Integration Specialist entry as requested */}
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
             date={t("career-history-3-date")}
