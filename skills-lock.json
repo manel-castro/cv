@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "skills": {
+    "react-native": {
+      "source": "vercel-labs/json-render",
+      "sourceType": "github",
+      "computedHash": "1cfeffbd71f8fc350e7fdb5cd1f76067d64b60f2fef2300fd83181ad90148451"
+    }
+  }
+}
